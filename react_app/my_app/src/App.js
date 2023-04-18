@@ -1,11 +1,9 @@
-import MainScreen from "./components/MainScreen";
-import LoginScreen from "./components/LoginScreen";
-import RegisterScreen from "./components/RegisterScreen"
+import Home from "./components/Home";
 
 function App() {
   return(
     <div>
-      <RegisterScreen/>
+      <Home/>
     </div>
   )
 }

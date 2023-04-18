@@ -1,0 +1,83 @@
+
+.wrapper.home_container ul.logo_section {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 8rem;
+
+    padding-inline: auto;
+    margin-left: -3rem;
+}
+
+.wrapper.home_container ul.logo_section h1{
+
+    z-index: 1000;
+    font-size: 2.5rem;
+
+    margin-left: -2rem;
+}
+
+.wrapper.home_container img{
+
+    width: 20%;
+
+    margin-top: -.5rem;
+
+    position: absolute;
+}
+
+.wrapper.home_container ul.login_label {
+
+    margin-top: 5vh;
+}
+
+.wrapper.home_container ul.login_label p{
+
+    margin-top: -.5rem;
+    color: #808080;
+}
+
+.wrapper.home_container ul.login_label span{
+
+    color: black;
+}
+
+.wrapper.home_container form{
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 2rem;
+}
+
+.wrapper.home_container .my_labels {
+
+    display: flex;
+
+    gap: .2rem;
+
+    flex-direction: column;
+
+    text-align: center;
+}
+
+.wrapper.home_container input {
+
+    width: 80vw;
+    margin-inline: auto;
+
+    border-radius: .2rem;
+    border: none;
+
+    height: 2rem;
+    
+    background-color: #D9D9D9;
+}
+
+#email,
+#pwd {
+
+    padding-left: 1rem;
+}
