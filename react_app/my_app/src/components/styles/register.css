@@ -1,56 +1,25 @@
-html {
-
-    box-sizing: border-box;
+.wrapper.register_container .register_label li h1{
+    
+    text-align: center;
+    margin-right: 3rem;
 }
 
-.wrapper.home_container ul.logo_section {
+.wrapper.register_container .register_label p {
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    gap: 8rem;
-
-    padding-inline: auto;
-    margin-left: -3rem;
+    margin-right: 3rem;
 }
 
-.wrapper.home_container ul.logo_section h1{
-
-    z-index: 1000;
-    font-size: 2.5rem;
-
-    margin-left: -2rem;
-}
-
-.wrapper.home_container img{
-
-    width: 5rem;
-
-    margin-top: -.5rem;
-
-    position: absolute;
-}
-
-.wrapper.home_container ul.login_label {
-
-    margin-top: 5vh;
-}
-
-.wrapper.home_container ul.login_label p{
-
-    margin-top: -.5rem;
-    color: #808080;
-
-    margin-right: 1.5rem;
-}
-
-.wrapper.home_container ul.login_label span{
+.wrapper.register_container .register_label span {
 
     color: black;
 }
 
-.wrapper.home_container form{
+.wrapper.register_container .register_label span:hover {
+
+    cursor: pointer;
+}
+
+.wrapper.register_container form{
 
     display: flex;
     flex-direction: column;
@@ -58,7 +27,7 @@ html {
     gap: 2rem;
 }
 
-.wrapper.home_container .my_labels {
+.wrapper.register_container .my_labels {
 
     display: flex;
 
@@ -69,7 +38,7 @@ html {
     text-align: center;
 }
 
-.wrapper.home_container input {
+.wrapper.register_container input {
 
     width: 20rem;
     margin-inline: auto;
@@ -88,7 +57,29 @@ html {
     padding-left: 1rem;
 }
 
-.wrapper.home_container .login_section button {
+.wrapper.register_container .login_section button {
+
+    background-color: #3A5A40;
+
+    border: none;
+    border-radius: .5rem;
+
+    color: white;
+
+    width: 10rem;
+    height: 3rem;
+    margin-left: 17.8rem;
+}
+
+.wrapper.register_container .login_section button:hover {
+    
+    background-color: #344E41;
+
+    cursor: pointer;
+} 
+
+
+.wrapper.register_container .login_section button {
 
     display: block;
     background-color: #3A5A40;
@@ -104,14 +95,24 @@ html {
     margin-inline: auto;
 }
 
-.wrapper.home_container .login_section button:hover {
+.wrapper.register_container .login_section button:hover {
     
     background-color: #344E41;
 
     cursor: pointer;
 } 
 
-.wrapper.home_container .styled_home {
+
+
+
+
+
+
+
+
+
+
+.wrapper.register_container .styled_home {
 
     margin-top: 2rem;
     padding-block: .01rem;
@@ -119,7 +120,7 @@ html {
     background-color: #E8EBE3;
 }
 
-.wrapper.home_container .styled_home h1 {
+.wrapper.register_container .styled_home h1 {
 
     width: 100%;
     text-align: center;
@@ -128,14 +129,14 @@ html {
     font-weight: 400;
 }
 
-.wrapper.home_container .styled_home {
+.wrapper.register_container .styled_home {
 
     margin-top: 4rem;
 
     height: 52vh;
 }
 
-.wrapper.home_container .styled_home ul {
+.wrapper.register_container .styled_home ul {
 
     display: flex;
 
@@ -160,7 +161,7 @@ html {
 
 }
 
-.wrapper.home_container .styled_home li{
+.wrapper.register_container .styled_home li{
 
     background-color: grey;
     display: block;
@@ -171,12 +172,12 @@ html {
     content: "";
 }
 
-.wrapper.screen.home_container .styled_home .another_block {
+.wrapper.screen.register_container .styled_home .another_block {
 
     display: none;
 }
 
-.wrapper.home_container .styled_home li#biggest_li {
+.wrapper.register_container .styled_home li#biggest_li {
 
     width: 25vw;
 
@@ -185,12 +186,12 @@ html {
     margin-bottom: 1rem;
 }
 
-.wrapper.home_container .styled_home li.low_li {
+.wrapper.register_container .styled_home li.low_li {
 
     margin-right: -5rem;
 } 
 
-.wrapper.home_container p {
+.wrapper.register_container p {
 
     text-align: center;
 
@@ -200,7 +201,7 @@ html {
     margin-block-end: auto;
 }
 
-.wrapper.home_container .end_phrase {
+.wrapper.register_container .end_phrase {
 
     margin-top: 2rem;
 
@@ -209,12 +210,12 @@ html {
     text-align: center;
 }
 
-.wrapper.home_container .end_phrase h2 {
+.wrapper.register_container .end_phrase h2 {
 
     font-weight: 400;
 }
 
-.wrapper.home_container .end_phrase h3 {
+.wrapper.register_container .end_phrase h3 {
 
     color: grey;
 
@@ -239,9 +240,9 @@ html {
         width: 100%;
     }
 
-    .screen.home_container ul.logo_section,
-    .screen.home_container ul.login_label,
-    .screen.screen.home_container form.login_section {
+    .screen.register_container ul.logo_section,
+    .screen.register_container ul.register_label,
+    .screen.screen.register_container form.login_section {
 
         background-color: #ffff;
 
@@ -251,15 +252,15 @@ html {
         margin-right: -7rem;
     }
 
-    .screen.home_container form.login_section button {
+    .screen.register_container form.login_section button {
 
         margin-left: 17.8rem;
     }
 
 
-    .screen.home_container ul.logo_section {
+    .screen.register_container ul.logo_section {
 
-        margin-top: 4rem;
+        margin-top: 10rem;
         margin-bottom: 3rem;
 
         width: auto;
@@ -267,14 +268,14 @@ html {
         margin-left: 16.3rem;
     }
 
-    .screen.home_container ul.logo_section h1{
+    .screen.register_container ul.logo_section h1{
 
         font-size: 2rem;
         font-weight: 500;
 
     }
 
-    .screen.home_container ul.logo_section img{
+    .screen.register_container ul.logo_section img{
 
         width: 4rem;
         
@@ -282,12 +283,19 @@ html {
         margin-left: 1.5rem;
     }
 
-    .screen.home_container ul.login_label li h1{
+    .screen.register_container ul.register_label {
 
-        font-size: 3rem;
+        margin-top: 11rem;
     }
 
-    .screen.home_container ul.login_label li p{
+    .screen.register_container ul.register_label li h1{
+
+        font-size: 3rem;
+
+        margin-left: -27rem;
+    }
+
+    .screen.register_container ul.register_label li p{
 
         width: fit-content;
 
@@ -296,19 +304,19 @@ html {
         font-size: 1.2rem;
     }
 
-    .screen.home_container ul.login_label li span:hover {
+    .screen.register_container ul.register_label li span:hover {
 
         cursor: pointer;
     }
 
 
-    .screen.home_container .my_labels {
+    .screen.register_container .my_labels {
 
         display: flex;
         flex-direction: row;
     }
 
-    .screen.home_container .my_labels label {
+    .screen.register_container .my_labels label {
 
         margin-top: .9rem;
 
@@ -317,7 +325,7 @@ html {
     }
 
 
-    .screen.home_container .my_labels input {
+    .screen.register_container .my_labels input {
 
         width: 20rem;
 
@@ -327,16 +335,16 @@ html {
 
 
 
-    .screen.home_container .my_labels.email input{
+    .screen.register_container .my_labels.email input{
 
         margin-left: 3.7rem;
     }
-    .screen.home_container .my_labels.pwd input {
+    .screen.register_container .my_labels.pwd input {
 
         margin-left: 1.4rem;
     }
 
-    .screen.home_container .styled_home {
+    .screen.register_container .styled_home {
 
         position: absolute;
 
@@ -344,38 +352,38 @@ html {
 
         width: 50%;
         margin-inline-end: auto;
-        margin-top: -33.8rem;
+        margin-top: -33rem;
     }
 
-    .screen.home_container .styled_home h1 {
+    .screen.register_container .styled_home h1 {
 
         font-weight: 700;
     }
 
-    .screen.screen.home_container .styled_home .another_block {
+    .screen.screen.register_container .styled_home .another_block {
 
         display: block;
     }
 
-    .screen.home_container .styled_home ul {
+    .screen.register_container .styled_home ul {
 
         margin-top: 4.2rem;
 
     }
 
-    .screen.home_container .styled_home h1 {
+    .screen.register_container .styled_home h1 {
 
         margin-top: 4rem;
     }
 
-    .screen.home_container .end_phrase {
+    .screen.register_container .end_phrase {
 
         margin-top: -1rem;
 
         text-align: center;
     }
 
-    .screen.home_container .end_phrase h3 {
+    .screen.register_container .end_phrase h3 {
 
         color: grey;
     }

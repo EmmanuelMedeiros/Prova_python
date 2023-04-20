@@ -1,36 +1,12 @@
-import "./styles/home.css"
-import  logo from "./commons/logo.png"
-import { useEffect, useState } from "react"
+import "./styles/register.css"
 
-function Home() {
-
-    const [state, set_state] = useState()
-
-    useEffect(() => {
-        console.log(window.screen.width)
-
-        console.log(state)
-    })
-
-    let for_mobile = true
-
-    if(state >= "768") {
-        for_mobile = false
-    } else {
-        for_mobile = true
-    }
-
+function Register() {
     return(
-        <div className="wrapper teste screen home_container">
-            
-            <ul className="logo_section">
-                <li><img src={logo}/></li>
-                <li><h1>Tome_nota</h1></li>
-            </ul>
+        <div className="wrapper screen register_container">
 
-            <ul className="login_label">
-                <li><h1>Login</h1></li>
-                <li><p>Or register by clicking <span>here</span></p></li>
+            <ul className="register_label">
+                <li><h1>Register</h1></li>
+                <li><p>If you already have an account click <span>here</span></p></li>
             </ul>
 
             <form action="" className="login_section">
@@ -46,7 +22,7 @@ function Home() {
                 </div>
 
                 <div>
-                    <button type="submit">Login</button>
+                    <button type="submit">Register</button>
                 </div>
             </form>
 
@@ -74,7 +50,9 @@ function Home() {
                 <p>@ 2023 ALL RIGHTS RESERVED</p>
             </div>
         </div>
+
+        
     )
 }
 
-export default Home
+export default Register
