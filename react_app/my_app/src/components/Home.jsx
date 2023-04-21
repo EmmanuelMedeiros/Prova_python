@@ -1,24 +1,9 @@
 import "./styles/home.css"
 import  logo from "./commons/logo.png"
 import { useEffect, useState } from "react"
+import { Link } from "react-router-dom"
 
 function Home() {
-
-    const [state, set_state] = useState()
-
-    useEffect(() => {
-        console.log(window.screen.width)
-
-        console.log(state)
-    })
-
-    let for_mobile = true
-
-    if(state >= "768") {
-        for_mobile = false
-    } else {
-        for_mobile = true
-    }
 
     return(
         <div className="wrapper teste screen home_container">
@@ -30,7 +15,7 @@ function Home() {
 
             <ul className="login_label">
                 <li><h1>Login</h1></li>
-                <li><p>Or register by clicking <span>here</span></p></li>
+                <li><p>Or register by clicking<span><Link to={'/register'}>here</Link></span></p></li>
             </ul>
 
             <form action="" className="login_section">

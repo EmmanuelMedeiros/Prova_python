@@ -3,6 +3,13 @@ html {
     box-sizing: border-box;
 }
 
+a {
+
+    color: black;
+
+    margin-left: .3rem;
+}
+
 .wrapper.home_container ul.logo_section {
 
     display: flex;

@@ -1,4 +1,5 @@
 import "./styles/register.css"
+import { Link } from "react-router-dom"
 
 function Register() {
     return(
@@ -6,7 +7,7 @@ function Register() {
 
             <ul className="register_label">
                 <li><h1>Register</h1></li>
-                <li><p>If you already have an account click <span>here</span></p></li>
+                <li><p>If you already have an account click <span><Link to={"/"}>here</Link></span></p></li>
             </ul>
 
             <form action="" className="login_section">
