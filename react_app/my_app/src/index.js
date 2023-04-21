@@ -4,6 +4,7 @@ import './index.css';
 
 import Home from './components/Home';
 import Register from './components/Register';
+import { PageProvider } from "./context/PageContext.js"
 
 import App from './App';
 import {createBrowserRouter, RouterProvider } from "react-router-dom";
@@ -34,6 +35,7 @@ const router = createBrowserRouter([
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <RouterProvider router={router}/>
+      <RouterProvider router={router}/>
   </React.StrictMode>
+
 );

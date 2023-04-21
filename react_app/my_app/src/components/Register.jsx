@@ -1,7 +1,35 @@
+import { useEffect, useState } from "react"
 import "./styles/register.css"
 import { Link } from "react-router-dom"
 
 function Register() {
+
+    const [infos, set_infos] = useState({
+        email_value: "",
+        pwd_value: ""
+    })
+
+
+    const emailChangeHandler = (event) => {
+        set_infos({
+            ...infos,
+            email_value: event.target.value
+        })
+    }
+
+    const pwdChangeHandler = (event) => {
+        set_infos({
+            ...infos,
+            pwd_value: event.target.value
+        })
+
+        console.log(infos.pwd_value)
+    }
+
+    useEffect(()=> {
+        console.log(infos.email_value, infos.pwd_value)
+    })
+
     return(
         <div className="wrapper screen register_container">
 
@@ -14,16 +42,16 @@ function Register() {
 
                 <div className="my_labels email">
                 <label id="email_label">Email</label>
-                <input type="email" placeholder="example@hotmail.com" name="" id="email" />
+                <input type="email" onChange={emailChangeHandler} placeholder="example@hotmail.com" name="" id="email" />
                 </div>
 
                 <div className="my_labels pwd">
                 <label>Password</label>
-                <input type="password" placeholder="At least 4 characters" name="" id="pwd" />
+                <input type="password" onChange={pwdChangeHandler} placeholder="At least 4 characters" name="" id="pwd" />
                 </div>
 
                 <div>
-                    <button type="submit">Register</button>
+                    <button type="submit" value="Submit">Register</button>
                 </div>
             </form>
 

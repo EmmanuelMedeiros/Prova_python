@@ -228,6 +228,61 @@ a {
     font-weight: 400;
 }
 
+.wrapper.home_container .not_error {
+
+    display: none;
+}
+
+.wrapper.home_container .error_msg {
+
+    position: relative;
+
+    background-color: #f75c5c;
+    display: block;
+
+    border-radius: 1rem;
+
+    width: 20rem;
+    height: 13rem;
+
+    z-index: 1000;
+    margin-inline: auto;
+}
+
+
+.wrapper.home_container .error_msg img {
+
+    margin-top: -6rem;
+}
+
+.wrapper.home_container .error_msg button {
+
+    position: relative;
+    border: none;
+    background: white;
+
+    border-radius: 1rem;
+
+    color: black;
+
+    width: 7rem;
+    height: 2rem;
+
+    margin-left: 6.5rem;
+    margin-top: -3rem;
+}
+
+.wrapper.home_container .error_msg h2{
+
+    padding-left: 9rem;
+
+    margin-top: -44rem;
+    padding-top: 1rem;
+
+    color: white;
+
+}
+
 @media (min-width: 768px){
     
     body {
@@ -385,5 +440,61 @@ a {
     .screen.home_container .end_phrase h3 {
 
         color: grey;
+    }
+
+    .screen.home_container .not_error {
+
+        display: none;
+    }
+    
+    .screen.home_container .error_msg {
+    
+        position: relative;
+    
+        background-color: #f75c5c;
+        display: block;
+    
+        border-radius: 1rem;
+    
+        margin-left: 30rem;
+        width: 20rem;
+        height: 13rem;
+    
+        z-index: 1000;
+    }
+    
+    
+    .screen.home_container .error_msg img {
+    
+        margin-top: -6rem;
+    }
+    
+    .screen.home_container .error_msg button {
+    
+        position: relative;
+        border: none;
+        background: white;
+    
+        border-radius: 1rem;
+    
+        color: black;
+    
+        width: 7rem;
+        height: 2rem;
+    
+        margin-left: 6.5rem;
+        margin-top: -3rem;
+    }
+    
+    .screen.home_container .error_msg h2{
+    
+        padding-left: 9rem;
+
+    
+        margin-top: -25rem;
+        padding-top: 1rem;
+    
+        color: white;
+    
     }
 }

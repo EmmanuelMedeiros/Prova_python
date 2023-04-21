@@ -1,8 +1,9 @@
+import Home from "./Home"
+
 function ListScreen() {
+
     return(
-        <div>
-            <h1>d</h1>
-        </div>
+        <h1>Teste</h1>
     )
 }
 

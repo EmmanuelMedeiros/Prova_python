@@ -8,6 +8,7 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 
 builder.Services.AddControllers();
+builder.Services.AddCors();
 builder.Services.AddScoped<IPersonRepositoryInterface, PersonRepositoryImplementation>();
 builder.Services.AddScoped<IListRepositoryInterface, ListRepositoryImplementation>();
 
@@ -27,6 +28,12 @@ if (app.Environment.IsDevelopment()) {
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+
+app.UseCors(c => {
+    c.AllowAnyHeader();
+    c.AllowAnyMethod();
+    c.AllowAnyOrigin();
+});
 
 app.UseHttpsRedirection();
 

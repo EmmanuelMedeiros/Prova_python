@@ -18,10 +18,17 @@ namespace todo_list_api.Controllers {
             _listRepository = listRepository;
         }
 
-        [HttpGet()] 
-        public IActionResult GetAllPeople() {
+        [HttpGet("/{email}/{pwd}")] 
+        public IActionResult GetAllPeople(string email, string pwd) {
 
-            return Ok(_peopleRepository.GetAllPeople());
+            var person = _peopleRepository.GetPersonByEmailAndPwd(email, pwd);
+
+            if(person != null) {
+
+                return Ok(person);
+            } else {
+                return BadRequest();
+            }
         }
 
         [HttpPost("/person")]

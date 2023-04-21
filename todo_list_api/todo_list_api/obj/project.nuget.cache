@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "d9o3UQN5vW54ksBW4+FIdIdbSV3DjB43DS5Zzv8IR6X8uyaziKxMWV8IskH/vGPLUIC9v1JFSBtPUtmszWXmIQ==",
+  "dgSpecHash": "kgBgOX0nHfagZOiQBXRG+Bk3X6Ke+08jcqdMYwW9z2n/2bhusDgf8ihQeiS8pONRsIgwi2Eq+bYjTtDK05a78A==",
   "success": true,
-  "projectFilePath": "C:\\Users\\emman\\OneDrive\\Área de Trabalho\\prova_react_app\\todo_list_api\\todo_list_api\\todo_list_api.csproj",
+  "projectFilePath": "C:\\Users\\emman\\OneDrive\\Área de Trabalho\\prova_react_app\\Prova_python\\todo_list_api\\todo_list_api\\todo_list_api.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\emman\\.nuget\\packages\\microsoft.aspnetcore.openapi\\7.0.0\\microsoft.aspnetcore.openapi.7.0.0.nupkg.sha512",
     "C:\\Users\\emman\\.nuget\\packages\\microsoft.entityframeworkcore\\7.0.5\\microsoft.entityframeworkcore.7.0.5.nupkg.sha512",

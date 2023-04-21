@@ -1,4 +1,5 @@
-﻿using todo_list_api.Context;
+﻿using Microsoft.EntityFrameworkCore;
+using todo_list_api.Context;
 using todo_list_api.Model;
 
 namespace todo_list_api.Repository.Implementation {
@@ -32,6 +33,21 @@ namespace todo_list_api.Repository.Implementation {
             } catch(Exception ex) {
                 throw;
             }
+        }
+
+        public List<Person> GetPersonByEmailAndPwd(string email, string pwd) { 
+            if(_context.People.Any(p => p.Email == email) && _context.People.Any(p => p.Password == pwd)) {
+                try {
+
+                    var person = _context.People.FromSqlRaw($"select * from users where email = '{email}' and password = {pwd}").ToList();
+                    return person;
+                }catch(Exception ex) {
+                    throw;
+                }
+            } else {
+                return null;
+            }
+
         }
 
     }

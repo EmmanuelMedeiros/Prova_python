@@ -5,6 +5,7 @@ namespace todo_list_api.Repository {
 
         List<Person> GetAllPeople();
         Person GetPersonById(int id);
+        List<Person> GetPersonByEmailAndPwd(string email, string pwd);
         Person CreatePerson(Person person);
     }
 }

@@ -1,9 +1,54 @@
 import "./styles/home.css"
 import  logo from "./commons/logo.png"
+import error_img from "./commons/error.png"
 import { useEffect, useState } from "react"
-import { Link } from "react-router-dom"
 
-function Home() {
+import { Link, useNavigate } from "react-router-dom"
+
+import axios from "axios"
+
+function Home(props) {
+
+    const navigate = useNavigate()
+
+    const [login, set_login] = useState({
+        login_email: "",
+        login_pwd: ""
+    })
+
+    const [error, set_error] = useState(false)
+
+    const ChangeEmailHandler = (event) => {
+        set_login({
+            ...login,
+            login_email: event.target.value
+        })
+    }
+
+    const ChangePwdHandler = (event) => {
+        set_login({
+            ...login,
+            login_pwd: event.target.value
+        })
+    }
+
+    const SubmitHandler = (event) => {
+
+        event.preventDefault()
+
+        if(login.login_email.length < 1 || login.login_pwd.length < 4) {
+            set_error(true)
+        } else {
+            axios.get(`https://localhost:7281/${login.login_email}/${login.login_pwd}`)
+            .then(response => {
+            console.log(response.status)
+
+            if(response.status == 200) {
+                navigate('/todo-list')
+            }
+        })
+        }
+    }
 
     return(
         <div className="wrapper teste screen home_container">
@@ -18,16 +63,16 @@ function Home() {
                 <li><p>Or register by clicking<span><Link to={'/register'}>here</Link></span></p></li>
             </ul>
 
-            <form action="" className="login_section">
+            <form onSubmit={SubmitHandler} className="login_section">
 
                 <div className="my_labels email">
                 <label id="email_label">Email</label>
-                <input type="email" placeholder="example@hotmail.com" name="" id="email" />
+                <input type="email" onChange={ChangeEmailHandler} placeholder="example@hotmail.com" name="" id="email" />
                 </div>
 
                 <div className="my_labels pwd">
                 <label>Password</label>
-                <input type="password" placeholder="At least 4 characters" name="" id="pwd" />
+                <input type="password" onChange={ChangePwdHandler} placeholder="At least 4 characters" name="" id="pwd" />
                 </div>
 
                 <div>
@@ -57,6 +102,12 @@ function Home() {
                 </div>
 
                 <p>@ 2023 ALL RIGHTS RESERVED</p>
+
+                <div className={error ? "error_msg" : "not_error"}>
+                    <h2>Verifique se os dados foram inseridos corretamente!</h2>
+                    <img src={error_img}/>
+                    <button onClick={() => set_error(false)}>Ok</button>
+                </div>
             </div>
         </div>
     )
