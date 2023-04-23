@@ -1,13 +1,17 @@
 import "./styles/home.css"
 import  logo from "./commons/logo.png"
 import error_img from "./commons/error.png"
-import { useEffect, useState } from "react"
+
+import { useState, useContext } from "react"
+import { UserContext } from "../context/UserContext.jsx"
 
 import { Link, useNavigate } from "react-router-dom"
 
 import axios from "axios"
 
-function Home(props) {
+function Home() {
+
+    const {user_data, set_user_data} = useContext(UserContext)
 
     const navigate = useNavigate()
 
@@ -41,9 +45,9 @@ function Home(props) {
         } else {
             axios.get(`https://localhost:7281/${login.login_email}/${login.login_pwd}`)
             .then(response => {
-            console.log(response.status)
 
             if(response.status == 200) {
+                set_user_data(response.data)
                 navigate('/todo-list')
             }
         })

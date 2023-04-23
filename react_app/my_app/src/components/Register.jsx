@@ -1,8 +1,24 @@
 import { useEffect, useState } from "react"
 import "./styles/register.css"
-import { Link } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
+
+import { useForm } from "react-hook-form"
+
+import axios from "axios"
 
 function Register() {
+
+    const { register, handleSubmit, watch, formState: {errors} } = useForm();
+
+    const navigate = useNavigate()
+    
+     const addPost = data => axios.post("https://localhost:7281/person", data)
+    .then(() => {
+        navigate("/")
+    }).catch(error => {
+        console.log(error)
+    }) 
+
 
     const [infos, set_infos] = useState({
         email_value: "",
@@ -25,11 +41,6 @@ function Register() {
 
         console.log(infos.pwd_value)
     }
-
-    useEffect(()=> {
-        console.log(infos.email_value, infos.pwd_value)
-    })
-
     return(
         <div className="wrapper screen register_container">
 
@@ -38,20 +49,20 @@ function Register() {
                 <li><p>If you already have an account click <span><Link to={"/"}>here</Link></span></p></li>
             </ul>
 
-            <form action="" className="login_section">
+            <form onSubmit={handleSubmit(addPost)} className="login_section">
 
                 <div className="my_labels email">
                 <label id="email_label">Email</label>
-                <input type="email" onChange={emailChangeHandler} placeholder="example@hotmail.com" name="" id="email" />
+                <input type="email" name="email" {...register("email", {required: true})} onChange={emailChangeHandler} placeholder="example@hotmail.com"/>
                 </div>
 
                 <div className="my_labels pwd">
                 <label>Password</label>
-                <input type="password" onChange={pwdChangeHandler} placeholder="At least 4 characters" name="" id="pwd" />
+                <input type="password"  name="password" minLength={4} {...register("password", {required: true})} onChange={pwdChangeHandler} placeholder="At least 4 characters" />
                 </div>
-
+            
                 <div>
-                    <button type="submit" value="Submit">Register</button>
+                    <button type="submit">Register</button>
                 </div>
             </form>
 
