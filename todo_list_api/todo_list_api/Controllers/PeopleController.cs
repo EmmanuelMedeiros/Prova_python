@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.OpenApi.Validations;
 using todo_list_api.Model;
 using todo_list_api.Repository;
 
@@ -23,11 +24,10 @@ namespace todo_list_api.Controllers {
 
             var person = _peopleRepository.GetPersonByEmailAndPwd(email, pwd);
 
-            if(person != null) {
-
-                return Ok(person);
+            if(person == null || person.Count == 0) {
+                return NotFound();
             } else {
-                return BadRequest();
+                return Ok(person);
             }
         }
 

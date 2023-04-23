@@ -2,12 +2,14 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 
-import Home from './components/Home';
-import Register from './components/Register';
 import { UserProvider } from "./context/UserContext.jsx"
 
 import App from './App';
 import {createBrowserRouter, RouterProvider } from "react-router-dom";
+
+import Home from './components/Home';
+import CreateNote from './components/CreateNote';
+import Register from './components/Register';
 import ListScreen from './components/ListScreen';
 
 const router = createBrowserRouter([
@@ -27,6 +29,10 @@ const router = createBrowserRouter([
       {
         path:"/todo-list",
         element: <ListScreen/>
+      },
+      {
+        path: "/create-note",
+        element: <CreateNote/>
       }
     ]
   }

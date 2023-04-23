@@ -45,11 +45,12 @@ function Home() {
         } else {
             axios.get(`https://localhost:7281/${login.login_email}/${login.login_pwd}`)
             .then(response => {
-
             if(response.status == 200) {
                 set_user_data(response.data)
                 navigate('/todo-list')
             }
+        }).catch(response => {
+            set_error(true)
         })
         }
     }

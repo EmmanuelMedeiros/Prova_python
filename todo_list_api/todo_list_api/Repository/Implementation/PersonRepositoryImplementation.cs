@@ -39,7 +39,7 @@ namespace todo_list_api.Repository.Implementation {
             if(_context.People.Any(p => p.Email == email) && _context.People.Any(p => p.Password == pwd)) {
                 try {
 
-                    var person = _context.People.FromSqlRaw($"select * from users where email = '{email}' and password = {pwd}").ToList();
+                    var person = _context.People.FromSqlRaw($"select * from users where email = '{email}' and password = '{pwd}'").ToList();
                     return person;
                 }catch(Exception ex) {
                     throw;

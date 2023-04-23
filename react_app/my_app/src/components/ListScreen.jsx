@@ -1,6 +1,8 @@
 import Home from "./Home"
 import "./styles/listScreen.css"
+import hamburger_menu from "./commons/hamburger_menu.png"
 
+import { Link } from "react-router-dom"
 import { useState, useContext, useEffect } from "react"
 import { UserContext } from "../context/UserContext.jsx"
 
@@ -10,6 +12,7 @@ function ListScreen() {
 
     const {user_data, set_user_data} = useContext(UserContext)
     const [list_data, set_list_data] = useState([])
+    const [hamburger, set_hamburger] = useState(true)
 
     useEffect(() => {
 
@@ -19,13 +22,25 @@ function ListScreen() {
     })
     })
 
+    useEffect(() => {
+        console.log(hamburger)
+    })
+
     const user_email = user_data[0].email
-    console.log(user_email)
     return(
         <div className={user_email == undefined ? "null" : "wrapper screen list_container"}>
 
+            <div className="create_menu">
+                <img src={hamburger_menu} onClick={() => set_hamburger(false)} alt="" srcset="" id={hamburger ? "" : "null" }/>
+
+                <div className="oppened_menu" id={hamburger ? "null" : "appear"}>
+                <span class="material-icons" id="close_icon" onClick={() => set_hamburger(true)}>close</span>
+                    <h2><Link to={"/create-note"}><span>+</span>Criar nota</Link></h2>
+                </div>
+            </div>
+
             <h1>Bem vindo, <span>{user_email}</span></h1>
-            <p id={list_data.length == 0 ? "appear" : "p_dont_appear"}>Você ainda não tem anotações. Começe já a <span>tomar_nota</span></p>
+            <p id={list_data.length == 0 ? "appear" : "p_dont_appear"}>Você ainda não tem anotações. Começe já a <Link to={"/create-note"}><span>tomar_nota</span></Link></p>
 
             {list_data.map(element => (
                 <ul className="my_notes">
