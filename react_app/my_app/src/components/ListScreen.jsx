@@ -33,9 +33,9 @@ function ListScreen() {
             <div className="create_menu">
                 <img src={hamburger_menu} onClick={() => set_hamburger(false)} alt="" srcset="" id={hamburger ? "" : "null" }/>
 
-                <div className="oppened_menu" id={hamburger ? "null" : "appear"}>
+                <div className="oppened_menu screen" id={hamburger ? "null" : "appear"}>
                 <span class="material-icons" id="close_icon" onClick={() => set_hamburger(true)}>close</span>
-                    <h2><Link to={"/create-note"}><span>+</span>Criar nota</Link></h2>
+                <Link id="link" to={"/create-note"}><button><h2><span>+</span>Criar nota</h2></button></Link>
                 </div>
             </div>
 

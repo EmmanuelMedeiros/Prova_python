@@ -344,6 +344,12 @@
         margin-left: 1.4rem;
     }
 
+    .screen.register_container .my_labels.email input::placeholder,
+    .screen.register_container .my_labels.pwd input::placeholder {
+
+        padding-left: 1rem;
+    }
+
     .screen.register_container .styled_home {
 
         position: absolute;
