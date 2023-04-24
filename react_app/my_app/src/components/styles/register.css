@@ -1,7 +1,8 @@
 .wrapper.register_container .register_label li h1{
     
+    display: contents;
     text-align: center;
-    margin-right: 3rem;
+    margin-right: 10rem;
 }
 
 .wrapper.register_container .register_label p {
