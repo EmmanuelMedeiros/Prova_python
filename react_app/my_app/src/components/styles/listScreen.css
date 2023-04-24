@@ -67,6 +67,11 @@
     border-radius: 1rem;
 }
 
+.wrapper.list_container .create_menu .oppened_menu#appear button{
+
+    background: none;
+}
+
 .wrapper.list_container .create_menu .oppened_menu#appear span {
 
     font-size: 2rem;
