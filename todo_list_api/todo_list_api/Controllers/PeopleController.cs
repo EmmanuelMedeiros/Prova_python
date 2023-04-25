@@ -62,6 +62,20 @@ namespace todo_list_api.Controllers {
             }
         }
 
+        [HttpGet("/unique_note/{id}")]
+        public IActionResult GetUniqueNote(int id) {
+
+            var note = _listRepository.GetUniqueList(id);
+
+            if(note != null) {
+
+                return Ok(note);
+            }
+            else {
+                return NotFound();
+            }
+        }
+
 
     }
 }

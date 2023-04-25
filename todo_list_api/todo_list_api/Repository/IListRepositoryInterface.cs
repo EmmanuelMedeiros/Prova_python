@@ -4,5 +4,6 @@ namespace todo_list_api.Repository {
     public interface IListRepositoryInterface {
         List<TodoList> GetListByUser(int id);
         TodoList PostList(TodoList list);
+        TodoList GetUniqueList(int id);
     }
 }

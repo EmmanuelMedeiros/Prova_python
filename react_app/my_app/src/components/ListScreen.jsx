@@ -22,9 +22,6 @@ function ListScreen() {
     })
     })
 
-    useEffect(() => {
-        console.log(hamburger)
-    })
 
     const user_email = user_data[0].email
     return(
@@ -42,13 +39,15 @@ function ListScreen() {
             <h1>Bem vindo, <span>{user_email}</span></h1>
             <p id={list_data.length == 0 ? "appear" : "p_dont_appear"}>Você ainda não tem anotações. Começe já a <Link to={"/create-note"}><span>tomar_nota</span></Link></p>
 
+            <div className="notes_container">
             {list_data.map(element => (
                 <ul className="my_notes">
                     <li id="list_title">{element.title}</li>
-                    <li id="list_content">{element.content.substring(0,30)}</li>
+                    <li id="list_content">{element.content.substring(0,18)}</li>
                     <li><p>{element.content.length} chars</p></li>
                 </ul>
             ))}
+            </div>
         </div>
     )
 }

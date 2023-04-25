@@ -12,7 +12,7 @@ function Register() {
 
     const navigate = useNavigate()
     
-     const addPost = data => axios.post("https://localhost:7281/person", data)
+    const addPost = data => axios.post("https://localhost:7281/person", data)
     .then(() => {
         navigate("/")
     }).catch(error => {

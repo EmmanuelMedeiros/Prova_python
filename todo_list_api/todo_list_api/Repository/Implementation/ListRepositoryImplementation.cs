@@ -37,5 +37,19 @@ namespace todo_list_api.Repository.Implementation {
             }
         }
 
+        public TodoList GetUniqueList(int id) {
+
+            if(_context.Lists.Any(l => l.Id == id)) {
+                try {
+                    var my_list = _context.Lists.First(l => l.Id == id);
+                    return my_list;
+                } catch(Exception) {
+                    throw;
+                }
+            } else {
+                return null;
+            }
+        }
+
     }
 }

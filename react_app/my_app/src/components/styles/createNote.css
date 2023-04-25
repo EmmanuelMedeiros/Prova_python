@@ -7,7 +7,7 @@ li {
     background-color: #E8EBE3;
 
     margin-top: -1.5rem;
-    padding-bottom: 12vh;
+    padding-bottom: 14.5vh;
 }
 
 .wrapper.create_container h1 {
@@ -80,8 +80,35 @@ li {
 
 }
 
-.wrapper.create_container p#not_appear {
+.wrapper.create_container form.inserts button{
+
+    border: none;
+    border-radius: .2rem;
+
+    background-color: #FAFAFA;
+
+    width: 10rem;
+    height: 2rem;
+    
+    margin-inline: auto;
+    margin-top: -10vh;
+}
+
+.wrapper.create_container #not_appear {
 
     display: none;
 }
 
+.wrapper.create_container p#content_length {
+
+    color: red;
+    font-size: 20rem;
+}
+
+.wrapper.create_container form.inserts p#limit {
+
+    margin-top: 80vh;
+    margin-left: 4.7rem;
+
+    color: #c114148c;
+}
