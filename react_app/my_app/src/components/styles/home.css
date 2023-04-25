@@ -261,6 +261,8 @@ a {
     border: none;
     background: white;
 
+    cursor: pointer;
+
     border-radius: 1rem;
 
     color: black;

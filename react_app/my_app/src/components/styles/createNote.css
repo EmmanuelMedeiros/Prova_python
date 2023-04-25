@@ -1,0 +1,87 @@
+li {
+    list-style: none;
+}
+
+.wrapper.create_container {
+
+    background-color: #E8EBE3;
+
+    margin-top: -1.5rem;
+    padding-bottom: 12vh;
+}
+
+.wrapper.create_container h1 {
+
+    text-align: center;
+
+    padding-top: 2.5rem;
+}
+
+.wrapper.create_container form.inserts {
+
+    display: flex;
+
+    flex-direction: column;
+    gap: 1rem;
+    
+}
+
+.wrapper.create_container form.inserts li#insert_title {
+
+    text-align: center;
+}
+
+.wrapper.create_container form.inserts li#insert_title input {
+
+    background: none;
+    border: none;
+
+    font-size: 1.4rem;
+    text-align: center;
+    font-weight: 700;
+
+    margin-top: 1rem;
+    margin-right: .6rem;
+}
+
+.wrapper.create_container form.inserts li#insert_title input:focus {
+
+    outline: none;
+}
+
+.wrapper.create_container form.inserts li#insert_content textarea {
+
+    background: none;
+    border: none;
+
+    height: 70vh;
+    margin-left: -1rem;
+    padding-left: 4rem;
+
+    width: 20rem;
+    margin-top: 1rem;
+
+    text-decoration: underline;
+}
+
+.wrapper.create_container form.inserts li#insert_content textarea:focus {
+    
+    border: none;
+    outline: none;
+}
+
+.wrapper.create_container p {
+
+    position: absolute;
+    margin-top: 4.65rem;
+    margin-left: 1rem;
+
+    color: rgba(12, 12, 12, 0.377);
+
+}
+
+.wrapper.create_container p#not_appear {
+
+    display: none;
+}
+
