@@ -292,6 +292,7 @@ a {
         box-sizing: border-box;
 
         background-color: #ffff;
+
         width: 100%;
 
         overflow-y: hidden;
@@ -302,6 +303,8 @@ a {
 
         width: 100%;
     }
+
+
 
     .screen.home_container ul.logo_section,
     .screen.home_container ul.login_label,
@@ -404,11 +407,13 @@ a {
 
         position: absolute;
 
-        height: 120vh;
+        height: 90.4vh;
 
         width: 50%;
         margin-inline-end: auto;
         margin-top: -33.8rem;
+
+        padding-top: 10vh;
     }
 
     .screen.home_container .styled_home h1 {
