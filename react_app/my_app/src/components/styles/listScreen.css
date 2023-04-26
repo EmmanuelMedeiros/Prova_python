@@ -216,6 +216,11 @@
     #link {
 
         cursor: pointer;
+
+        position: relative;
+        display: block;
+
+
     }
 
     .null,
@@ -237,12 +242,12 @@
 
         cursor: pointer;
         
-        position: fixed;
+        position: absolute;
         display: block;
 
         background-color: red;
 
-        margin-top: 87vh;
+        margin-top: 4rem;
 
         width: 30%;
         margin-left: 32vw;
@@ -283,6 +288,23 @@
         font-weight: 400;
     }
 
+    .screen.list_container ul.my_notes {
+
+        background-color: #ececec;
+
+        padding-inline: 2rem;
+    }
+
+
+    .screen.list_container ul.my_notes p {
+
+        margin-left: 7rem;
+
+        margin-block: 1rem;
+
+        color: grey;
+    }
+
     .screen.list_container .create_menu .oppened_menu#null button {
 
         border: none;
@@ -293,11 +315,11 @@
         position: relative;
 
         height: 4rem;
-        width: 37rem;
+        width: 30rem;
 
-        margin-top: -10rem;
+
         margin-left: -2.5rem;
-
+        margin-top: -10rem;
     }
 
     .screen.list_container .create_menu img {
@@ -310,5 +332,8 @@
         display: flex;
 
         justify-content: space-around;
+        margin-inline: 6vw;
+
+        gap: .2rem;
     }
 }
