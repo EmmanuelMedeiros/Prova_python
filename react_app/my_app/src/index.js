@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 
 import { UserProvider } from "./context/UserContext.jsx"
+import { NoteProvider } from './context/UserContext.jsx';
 
 import App from './App';
 import {createBrowserRouter, RouterProvider } from "react-router-dom";
@@ -42,7 +43,9 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
       <UserProvider>
+        <NoteProvider>
         <RouterProvider router={router}/>
+        </NoteProvider>
       </UserProvider>
   </React.StrictMode>
 

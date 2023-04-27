@@ -4,13 +4,14 @@ import hamburger_menu from "./commons/hamburger_menu.png"
 
 import { Link } from "react-router-dom"
 import { useState, useContext, useEffect } from "react"
-import { UserContext } from "../context/UserContext.jsx"
+import { NoteContext, UserContext } from "../context/UserContext.jsx"
 
 import axios from 'axios'
 
 function ListScreen() {
 
     const {user_data, set_user_data} = useContext(UserContext)
+    const {note_data, set_note_data} = useContext(NoteContext)
     const [list_data, set_list_data] = useState([])
     const [hamburger, set_hamburger] = useState(true)
 
@@ -41,7 +42,7 @@ function ListScreen() {
 
             <div className="notes_container">
             {list_data.map(element => (
-                <ul className="my_notes">
+                <ul className="my_notes" onClick={() => set_note_data(element.id)}>
                     <li id="list_title">{element.title}</li>
                     <li id="list_content">{element.content.substring(0,18)}</li>
                     <li><p>{element.content.length} chars</p></li>
