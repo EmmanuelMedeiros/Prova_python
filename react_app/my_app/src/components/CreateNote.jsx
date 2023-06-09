@@ -30,7 +30,7 @@ function CreateNote() {
             <h1>Nova nota</h1>
 
             <form className="inserts" onSubmit={handleSubmit(create_note)}>
-                <li id="insert_title"><input type="text" name="title" placeholder="Título aqui" id="" maxLength={20} {...register("title")}/></li>
+                <li id="insert_title"><input type="text" name="title" placeholder="Título aqui" id="" maxLength={20} minLength={5} {...register("title")}/></li>
                 <p id={letters == "" ? "not_appear" : ""}>{-letters.length + 140}</p>
                 <li id="insert_content"><textarea type="text" name="content" placeholder="Nova nota (até 140 caracteres)"  {...register("content")}/></li>
                 <button id={letters.length > 140 ? "not_appear" : ""} type="submit">Criar</button>

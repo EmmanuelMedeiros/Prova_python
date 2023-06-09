@@ -23,6 +23,14 @@ function ListScreen() {
     })
     })
 
+    const DeleteNote = (note_id) => {
+        console.log(note_id)
+        axios.delete(`https://localhost:7281/note/${note_id}`)
+        .then(response => {
+            console.log(response)
+        })
+    }
+
 
     const user_email = user_data[0].email
     return(
@@ -43,6 +51,7 @@ function ListScreen() {
             <div className="notes_container">
             {list_data.map(element => (
                 <ul className="my_notes" onClick={() => set_note_data(element.id)}>
+                    <li id="remove_note" onClick={() => DeleteNote(element.id)}>X</li>
                     <li id="list_title">{element.title}</li>
                     <li id="list_content">{element.content.substring(0,18)}</li>
                     <li><p>{element.content.length} chars</p></li>

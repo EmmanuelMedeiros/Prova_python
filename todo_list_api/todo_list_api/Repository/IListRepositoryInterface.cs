@@ -5,5 +5,6 @@ namespace todo_list_api.Repository {
         List<TodoList> GetListByUser(int id);
         TodoList PostList(TodoList list);
         TodoList GetUniqueList(int id);
+        void DeleteList(int id);
     }
 }

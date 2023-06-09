@@ -51,5 +51,17 @@ namespace todo_list_api.Repository.Implementation {
             }
         }
 
+        public void DeleteList(int id) {
+            if(_context.Lists.Any(l => l.Id == id)) {
+                try {
+                    var my_list = _context.Lists.FirstOrDefault(l => l.Id == id);
+                    _context.Lists.Remove(my_list);
+                    _context.SaveChanges();
+                } catch(Exception ex) {
+                    throw;
+                }
+            }
+        }
+
     }
 }

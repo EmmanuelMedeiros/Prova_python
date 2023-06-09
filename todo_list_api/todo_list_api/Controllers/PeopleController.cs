@@ -76,6 +76,11 @@ namespace todo_list_api.Controllers {
             }
         }
 
+        [HttpDelete("/note/{id}")]
+        public IActionResult DeleteNote(int id) {
+            _listRepository.DeleteList(id);
+            return Ok("excluido com sucesso");
+        }
 
     }
 }

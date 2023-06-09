@@ -153,6 +153,21 @@
 
 }
 
+.wrapper.list_container #remove_note {
+    color: red;
+
+    width: fit-content;
+    padding-inline: 1rem;
+    margin-left: -1.5rem;
+
+    font-weight: 700;
+    font-size: 1.4rem;
+}
+
+.wrapper.list_container #remove_note:hover {
+    cursor: pointer;
+}
+
 .wrapper.list_container #list_title {
 
     text-align: center;
@@ -234,6 +249,7 @@
         overflow-y: auto;
     }
 
+
     .screen.list_container .create_menu .oppened_menu#null {
 
         opacity: 1;
@@ -272,7 +288,7 @@
         
         color: #588157;
     }
-
+    
     .screen.list_container .create_menu .oppened_menu#null h2 {
 
         margin-top: -1.3rem;
@@ -318,7 +334,7 @@
         width: 30rem;
 
 
-        margin-left: -2.5rem;
+        margin-left: -7rem;
         margin-top: -10rem;
     }
 
